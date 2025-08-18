@@ -1,5 +1,5 @@
 window.BRPROJECT_CONFIG = {
-  BASE_URL: 'https://brproject.vercel.app',
+  BASE_URL: 'https://brproject-powerup-trello.vercel.app/',
   API_VERSION: 'v1',
   DEFAULT_TIMEOUT: 10000,
   STORAGE_KEYS: {
