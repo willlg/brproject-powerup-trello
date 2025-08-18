@@ -1,0 +1,166 @@
+
+body {
+  font-size: 10px;
+  height: 68px;
+  overflow: hidden;
+  padding: 2px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#brproject-card-status {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+}
+
+.brproject-status-container {
+  flex-shrink: 0;
+  height: 18px;
+}
+
+.brproject-status-container .brproject-button {
+  width: 100%;
+  height: 18px;
+  padding: 2px 4px;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 2px;
+  min-height: 18px;
+}
+
+.brproject-status-container .brproject-loading {
+  width: 8px;
+  height: 8px;
+  border-width: 1px;
+  margin-right: 4px;
+}
+
+.brproject-buttons-row {
+  display: flex;
+  gap: 2px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.brproject-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border: none;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  height: 18px;
+  color: white;
+  text-decoration: none;
+  min-height: 18px;
+}
+
+.brproject-edit-button {
+  background: #00875a;
+}
+
+.brproject-edit-button:hover {
+  background: #006644;
+  text-decoration: none;
+  color: white;
+}
+
+.brproject-dashboard-button {
+  background: #8b5a00;
+}
+
+.brproject-dashboard-button:hover {
+  background: #664400;
+  text-decoration: none;
+  color: white;
+}
+
+.brproject-no-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-style: italic;
+  color: #8c8c8c;
+  background: #f5f5f5;
+  width: 100%;
+  height: 18px;
+}
+
+.brproject-info {
+  flex: 1;
+  padding: 2px 4px;
+  background: var(--brproject-light);
+  border-radius: 2px;
+  font-size: 9px;
+  line-height: 1.2;
+  min-height: 24px;
+  display: flex;
+  gap: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.brproject-info .brproject-info-item {
+  flex: 1;
+  color: #5e6c84;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+  display: block;
+}
+
+.brproject-info .brproject-info-label {
+  font-weight: 600;
+  color: #42526e;
+  min-width: auto;
+  font-size: 9px;
+}
+
+.brproject-info .brproject-info-value {
+  font-size: 9px;
+}
+
+.brproject-button-start {
+  background: var(--brproject-primary) !important;
+  color: white;
+}
+
+.brproject-button-start:hover:not(:disabled) {
+  background: var(--brproject-primary-dark) !important;
+}
+
+.brproject-button-stop {
+  background: var(--brproject-danger) !important;
+  color: white;
+}
+
+.brproject-button-stop:hover:not(:disabled) {
+  background: var(--brproject-danger-dark) !important;
+}
+
+.brproject-button:disabled .brproject-loading {
+  margin-right: 4px;
+}
+
+@media (max-width: 300px) {
+  .brproject-info {
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .brproject-info .brproject-info-item {
+    white-space: normal;
+  }
+}

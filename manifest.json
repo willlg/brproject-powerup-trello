@@ -1,0 +1,19 @@
+{
+  "name": "BRProject Power-Up",
+  "details": "Controle de tempo e tarefas",
+  "author": "BRSIS",
+  "capabilities": [
+    "board-buttons",
+    "card-back-section",
+    "authorization-status"
+  ],
+  "connector_name": "BRProject",
+  "icon": {
+    "url": "./assets/icons/brproject-icon.png"
+  },
+  "tags": [
+    "productivity",
+    "time-tracking",
+    "project-management"
+  ]
+}

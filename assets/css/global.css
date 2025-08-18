@@ -1,0 +1,317 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --brproject-primary: #0079bf;
+  --brproject-primary-dark: #005a8b;
+  --brproject-success: #4caf50;
+  --brproject-success-light: #e8f5e9;
+  --brproject-danger: #f44336;
+  --brproject-danger-dark: #d32f2f;
+  --brproject-warning: #ffc107;
+  --brproject-warning-light: #fff3cd;
+  --brproject-info: #17a2b8;
+  --brproject-light: #f8f9fa;
+  --brproject-dark: #333;
+  --brproject-border: #ddd;
+  --brproject-shadow: rgba(0,0,0,0.1);
+  --brproject-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  font-family: var(--brproject-font-family);
+  margin: 0;
+  padding: 0;
+  color: var(--brproject-dark);
+  background-color: var(--brproject-light);
+}
+
+.brproject-hidden {
+  display: none !important;
+}
+
+.brproject-loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid var(--brproject-primary);
+  border-radius: 50%;
+  animation: brproject-spin 1s linear infinite;
+}
+
+.brproject-loading-small {
+  width: 10px;
+  height: 10px;
+  border-width: 1px;
+}
+
+@keyframes brproject-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes brproject-pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.brproject-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: var(--brproject-font-family);
+  min-height: 36px;
+}
+
+.brproject-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.brproject-button-primary {
+  background: var(--brproject-primary);
+  color: white;
+}
+
+.brproject-button-primary:hover:not(:disabled) {
+  background: var(--brproject-primary-dark);
+  color: white;
+  text-decoration: none;
+}
+
+.brproject-button-success {
+  background: var(--brproject-success);
+  color: white;
+}
+
+.brproject-button-success:hover:not(:disabled) {
+  background: #45a049;
+  color: white;
+  text-decoration: none;
+}
+
+.brproject-button-danger {
+  background: var(--brproject-danger);
+  color: white;
+}
+
+.brproject-button-danger:hover:not(:disabled) {
+  background: var(--brproject-danger-dark);
+  color: white;
+  text-decoration: none;
+}
+
+.brproject-button-secondary {
+  background: var(--brproject-light);
+  color: var(--brproject-dark);
+  border: 1px solid var(--brproject-border);
+}
+
+.brproject-button-secondary:hover:not(:disabled) {
+  background: #e9ecef;
+  color: var(--brproject-dark);
+  text-decoration: none;
+}
+
+.brproject-button-small {
+  padding: 4px 8px;
+  font-size: 12px;
+  min-height: 24px;
+}
+
+.brproject-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brproject-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brproject-form-group label {
+  font-weight: 500;
+  color: var(--brproject-dark);
+  font-size: 12px;
+}
+
+.brproject-form-group input {
+  padding: 8px 12px;
+  border: 1px solid var(--brproject-border);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: var(--brproject-font-family);
+}
+
+.brproject-form-group input:focus {
+  outline: none;
+  border-color: var(--brproject-primary);
+  box-shadow: 0 0 0 2px rgba(0, 121, 191, 0.1);
+}
+
+.brproject-feedback {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.brproject-feedback-success {
+  background: var(--brproject-success-light);
+  color: #2e7d32;
+  border: 1px solid var(--brproject-success);
+}
+
+.brproject-feedback-error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid var(--brproject-danger);
+}
+
+.brproject-feedback-warning {
+  background: var(--brproject-warning-light);
+  color: #856404;
+  border: 1px solid var(--brproject-warning);
+}
+
+.brproject-feedback-info {
+  background: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid var(--brproject-info);
+}
+
+.brproject-container {
+  max-width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--brproject-shadow);
+  overflow: hidden;
+}
+
+.brproject-header {
+  background: linear-gradient(135deg, var(--brproject-primary) 0%, var(--brproject-primary-dark) 100%);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.brproject-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.brproject-header .version {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.brproject-content {
+  padding: 16px;
+}
+
+.brproject-footer {
+  padding: 12px 16px;
+  background: var(--brproject-light);
+  border-top: 1px solid #e0e0e0;
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+}
+
+.brproject-info {
+  background: var(--brproject-light);
+  border: 1px solid var(--brproject-border);
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.brproject-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.brproject-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.brproject-info-label {
+  font-weight: 600;
+  color: var(--brproject-primary);
+  min-width: 60px;
+}
+
+.brproject-info-value {
+  flex: 1;
+  color: var(--brproject-dark);
+}
+
+.brproject-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.brproject-status-running {
+  background: var(--brproject-success-light);
+  color: #2e7d32;
+  border: 1px solid var(--brproject-success);
+}
+
+.brproject-status-stopped {
+  background: #fafafa;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.brproject-status-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: brproject-pulse 1.5s infinite;
+}
+
+.brproject-status-running .brproject-status-icon {
+  background: var(--brproject-success);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .brproject-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .brproject-content {
+    padding: 12px;
+  }
+  
+  .brproject-header {
+    padding: 12px;
+  }
+}

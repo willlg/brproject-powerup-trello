@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Status - BRProject</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="card-status.component.css">
+</head>
+<body>
+  <div id="brproject-card-status">
+    <div id="brproject-status" class="brproject-status-container">
+      <button class="brproject-button brproject-button-primary brproject-button-small" disabled>
+        <span class="brproject-loading brproject-loading-small"></span>
+        Carregando...
+      </button>
+    </div>
+    
+    <div class="brproject-buttons-row">
+      <a id="edit-button" href="#" class="brproject-action-button brproject-edit-button" target="_blank" style="display: none;">
+        Editar
+      </a>
+      <a id="dashboard-button" href="#" class="brproject-action-button brproject-dashboard-button" target="_blank" style="display: none;">
+        Dashboard
+      </a>
+      <div id="no-links-message" class="brproject-no-links" style="display: none;">
+        Tarefa não encontrada
+      </div>
+    </div>
+    
+    <div id="brproject-info" class="brproject-info">
+      <div class="brproject-info-item">
+        <span class="brproject-info-label">Cliente:</span> 
+        <span id="cliente-nome" class="brproject-info-value">-</span>
+      </div>
+      <div class="brproject-info-item">
+        <span class="brproject-info-label">Projeto:</span> 
+        <span id="projeto-nome" class="brproject-info-value">-</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  <script src="../../../vendor/jquery.min.js"></script>
+  <script src="../../../vendor/md5.js"></script>
+  <script src="../../core/config.js"></script>
+  <script src="../../utils/helpers.js"></script>
+  <script src="../../services/brproject.service.js"></script>
+  <script src="../../services/trello.service.js"></script>
+  <script src="card-status.component.js"></script>
+</body>
+</html>

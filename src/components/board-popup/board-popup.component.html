@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRProject - Controle de Tarefas</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="board-popup.component.css">
+</head>
+<body>
+  <div class="brproject-container">
+    <div class="brproject-header">
+      <h3>BRProject</h3>
+      <div class="version">v2.0</div>
+    </div>
+    
+    <div class="brproject-content">
+      <div id="brproject-root">
+        <div class="brproject-loading-container">
+          <div class="brproject-loading"></div>
+          <div class="loading-text">Carregando...</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="brproject-footer">
+      BRProject - Controle de Tempo para Trello
+    </div>
+  </div>
+
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+  <script src="../../../vendor/jquery.min.js"></script>
+  <script src="../../../vendor/md5.js"></script>
+  <script src="../../core/config.js"></script>
+  <script src="../../utils/helpers.js"></script>
+  <script src="../../services/brproject.service.js"></script>
+  <script src="../../services/trello.service.js"></script>
+  <script src="board-popup.component.js"></script>
+</body>
+</html>
