@@ -151,7 +151,7 @@ class BoardPopupComponent {
             <input 
               id="brproject-url" 
               name="url" 
-              value="https://www2.projetos.brsis.com.br/brproject" 
+              value="https://projetos.brsis.com.br/brproject" 
               type="url" 
               autocomplete="off"
               placeholder="https://exemplo.com.br/brproject"

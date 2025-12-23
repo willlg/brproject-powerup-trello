@@ -164,7 +164,7 @@ class CardStatusComponent {
       projetoElement.textContent = projetoNome;
       
       if (tarefa.idtarefa) {
-        const baseUrl = 'https://www2.projetos.brsis.com.br/brproject';
+        const baseUrl = 'https://projetos.brsis.com.br/brproject';
         editButtonElement.href = `${baseUrl}/tarefa/update/${tarefa.idtarefa}`;
         editButtonElement.style.display = 'inline-flex';
         
